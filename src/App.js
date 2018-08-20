@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Lista from './Lista'
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class App extends Component {
           id: 2,
           nombre: "Desayuno en Tiffany's",
           sinopsis: "Holly Golightly (Audrey Hepburn) es una escort y aspirante a actriz con un comportamiento bastante extravagante. Prueba de ello es su costumbre de desayunar frente a la joyería Tiffany & Co. Paul Varjack (George Peppard) es un tímido escritor que es mantenido por una mujer casada. Cuando ambos se convierten en vecinos y se conocen, Holly se enamora de Paúl. Sin embargo ella lo rechaza después y se compromete, por su dinero, con José Pereira (José Luis de Vilallonga), un político brasileño millonario. Finalmente, luego de que su prometido rompa con ella, Holly acepta el amor de Paul.",
-          urlImagen: "https://commons.wikimedia.org/wiki/File:Fr%C3%BCst%C3%BCck_bei_Tiffany_Filmlogo.png"
+          urlImagen: "https://upload.wikimedia.org/wikipedia/commons/0/01/Fr%C3%BCst%C3%BCck_bei_Tiffany_Filmlogo.png"
         },
         {
           id: 3,
@@ -34,11 +35,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Mi lista de películas</h1>
         </header>
-        <p className="App-intro">
-          Hola mundo
-        </p>
+        <div>
+          <Lista listaPeliculas={this.state.peliculas} />
+        </div>
       </div>
     );
   }
